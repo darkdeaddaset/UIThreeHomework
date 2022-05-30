@@ -4,12 +4,6 @@ import * as readlineSync from "readline-sync"
 
 
 const tree: Tree<number> = new Tree<number>();
-tree.add(5);
-tree.add(4);
-tree.add(7);
-tree.add(10);
-tree.add(8);
-tree.add(1);
 
 function add(){
     console.log("Add");
@@ -48,8 +42,28 @@ function print(){
     tree.getTree(tree.root)
 }
 
-print()
-add()
-search()
-del()
 
+while (true){
+    console.log("1) Add");
+    console.log("2) Print of Tree");
+    console.log("3) Search");
+    console.log("4) Delete");
+
+    let x = readlineSync.question("Your choice: ");
+
+    if (Number(x) === 1){
+        add();
+    }
+    if (Number(x) === 2){
+        print();
+    }
+    if (Number(x) === 3){
+        search();
+    }
+    if (Number(x) === 4){
+        del();
+    }
+    if (Number(x) === 0){
+        process.exit(0);
+    }
+}

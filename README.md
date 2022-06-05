@@ -1,4 +1,4 @@
-# UIThreeHomework
+# UIThreeHomework (Принято)
 
 Знакомство с TypeScript
 Реализовать бинарное дерево поиска
